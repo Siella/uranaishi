@@ -36,6 +36,6 @@ class Uranaishi:
 
 
 if __name__ == "__main__":
-    u = Uranaishi('text.txt')
+    u = Uranaishi('input.txt')
     for word in u.matches:
         print(*u.matches[word]+[''], sep='\n')
