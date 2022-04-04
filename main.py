@@ -32,10 +32,7 @@ class Uranaishi:
             key: val for key, val in self.word_freq.items()
             if key.startswith(char_seq)
         }
-        return sorted(
-            matches,
-            key=lambda key: (matches[key], key),
-            reverse=True)[:10]
+        return sorted(matches, key=lambda key: (-matches[key], key))[:10]
 
 
 if __name__ == "__main__":
